@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlyPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mamorky.relativelayoutpractica.RLActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txvDolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dólares"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/edtDolares"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvDolares"
+        android:layout_alignStart="@id/txvDolares"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/txvEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dólares"
+        android:layout_below="@id/edtDolares"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/edtEuros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvEuros"
+        android:layout_alignEnd="@id/edtDolares"
+        android:layout_alignStart="@id/txvEuros"/>
+
+    <TextView
+        android:id="@+id/txvValorCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor de conversión"
+        android:layout_below="@id/edtEuros"
+        android:layout_alignStart="@id/edtEuros"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/llyCambiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvValorCon"
+        android:layout_alignStart="@id/txvValorCon">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="1$ ="/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Valor"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgrpConvertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyCambiar">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convertir a Dólares" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convertir a Euros"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgrpConvertir"
+        android:layout_marginTop="20dp"
+        android:text="Convertir"/>
+
+</RelativeLayout>
